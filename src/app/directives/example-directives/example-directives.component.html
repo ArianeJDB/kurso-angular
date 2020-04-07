@@ -1,0 +1,13 @@
+<div *ngIf='show; then ok else error'></div>
+<ng-template #ok>
+    <ul>
+        <li *ngFor="let color of colors; let o = odd; let e = even; let l = last; let i = index;" [style.color]="color" [ngClass]="{even: e && !l, odd: o && !l, last: l}" [ngSwitch]="color">
+            <p *ngSwitchCase="'blue'">Hola, soy azul</p>
+            <p *ngSwitchDefault>{{color | uppercase | decorator: '**'}}</p>
+        </li>
+    </ul>
+</ng-template>
+<ng-template #error>El show es falso</ng-template>
+<p> {{today | date: 'yyy-MM-dd' }}</p>
+
+

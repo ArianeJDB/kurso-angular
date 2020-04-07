@@ -1,0 +1,17 @@
+<p>login works!</p>
+
+<form [formGroup]="form">
+<label for="username">Username</label>
+<input type="text" formControlName="username" placeholder="Ari"/>
+<div *ngIf="form.get('username').dirty && !form.get('username').valid">
+<p *ngIf="form.get('username').hasError('startWithNumber')">Tiene que empezar con un número</p>
+</div>
+<label for="password">Password</label>
+<input type="password" formControlName="password" placeholder="password"/>
+<div *ngIf="form.get('password').dirty && !form.get('password').valid">
+    <p *ngIf="form.get('password').hasError('minlength')">Mínimo 4 caracteres</p>
+    </div>
+<button [disabled]="!form.valid" (click)="sendLogin()">Send</button>
+</form>
+
+{{form.valid}}

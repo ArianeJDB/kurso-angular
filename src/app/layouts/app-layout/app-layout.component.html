@@ -1,0 +1,9 @@
+<p>app-layout works!</p>
+<nav>
+    <a [routerLink]="['/directives']">Directivas</a>
+    <a [routerLink]="['/father']">Padre</a>
+    <a [routerLink]="['/father/789']" [queryParams]="{params:1}">IR AL HIJO</a>
+    <a [routerLink]="['/chuck']">Chuck</a>
+    <a [routerLink]="['/users']">Users</a>
+</nav>
+<router-outlet></router-outlet>

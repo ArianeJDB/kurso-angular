@@ -1,0 +1,7 @@
+<button (click)="showAlert()">
+    Padre envía
+</button>
+<p>{{answer}}</p>
+<app-child [texto]="texto" (sendAnswer)="getAnswer($event)"> </app-child>
+
+<button (click)="goToDirectives()">to directives</button>

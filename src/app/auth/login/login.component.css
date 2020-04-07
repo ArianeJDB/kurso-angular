@@ -1,0 +1,11 @@
+.ng-valid {
+    background-color: green;
+}
+
+.ng-dirty {
+    background-color: red;
+}
+
+.ng-pending { 
+    background-color: grey
+}
